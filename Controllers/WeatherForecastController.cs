@@ -8,7 +8,7 @@ namespace DevopsLearn.Controllers
     {
         private static readonly string[] Summaries =
         [
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "Blazing", "Sizzling", "Torrid", "Boiling", "Broiling"
         ];
 
         [HttpGet(Name = "GetWeatherForecast")]
