@@ -8,7 +8,7 @@ namespace DevopsLearn.Controllers
     {
         private static readonly string[] Summaries =
         [
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Hot", "Sweltering", "Scorching", "Blazing", "Sizzling", "Torrid", "Boiling", "Broiling","Searing", "Fiery", "Burning", "Scalding", "Blistering", "Incendiary", "Infernal", "Volcanic", "Suffocating", "Sweltry", "Tropical", "Sultry", "Humid"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Hot", "Sweltering", "Scorching", "Blazing", "Sizzling", "Torrid", "Boiling", "Broiling", "Searing", "Fiery", "Burning", "Scalding", "Blistering", "Infernal", "Volcanic", "Suffocating", "Sweltry", "Tropical", "Sultry", "Humid", "Muggy", "Sticky", "Clammy"
         ];
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -17,7 +17,7 @@ namespace DevopsLearn.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
+                TemperatureC = Random.Shared.Next(-20, 60),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
