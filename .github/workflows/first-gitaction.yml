@@ -7,6 +7,23 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore DevopsLearn.slnx
+
+      - name: Build
+        run: dotnet build DevopsLearn.slnx --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test DevopsLearn.slnx --configuration Release --no-build
+
       - name: Print step
         run: |
           echo "Hello World 1!"
