@@ -1,0 +1,11 @@
+name: Demo
+on: workflow_dispatch
+
+permissions:
+  contents: read
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print step
+        run: echo "Hello World !"
