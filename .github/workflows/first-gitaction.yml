@@ -1,5 +1,8 @@
 name: Demo
 on: workflow_dispatch
+
+permissions:
+  contents: read
 jobs:
   first-job:
     runs-on: ubuntu-latest
